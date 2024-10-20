@@ -63,10 +63,64 @@
             color: #c0392b;
             font-weight: bold;
         }
+        .instructions {
+    background-color: #f8f9fa;
+    border: 1px solid #e9ecef;
+    border-radius: 5px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.instructions h2 {
+    color: #495057;
+    margin-top: 0;
+}
+
+.instructions h3 {
+    color: #495057;
+}
+
+.instructions code {
+    background-color: #e9ecef;
+    padding: 2px 4px;
+    border-radius: 4px;
+    font-family: monospace;
+}
+
+.instructions ul, .instructions ol {
+    padding-left: 20px;
+}
+
+.instructions li {
+    margin-bottom: 10px;
+}
     </style>
 </head>
 <body>
     <h1>Regex Matching App</h1>
+    
+    <div class="instructions">
+    <h2>How to Use This Regex Matching Tool</h2>
+    <ol>
+        <li><strong>Test String:</strong> Enter the text you want to search through in the "Test String" box.</li>
+        <li><strong>Regex Pattern:</strong> Enter your regular expression in the "Regex Pattern" box.</li>
+        <li>Click "Find Matches" to see all matching substrings.</li>
+    </ol>
+    <h3>Quick Regex Guide:</h3>
+    <ul>
+        <li><code>\d</code> - Matches any digit (0-9)</li>
+        <li><code>\w</code> - Matches any word character (a-z, A-Z, 0-9, _)</li>
+        <li><code>\s</code> - Matches any whitespace character</li>
+        <li><code>^</code> - Matches the start of a line</li>
+        <li><code>$</code> - Matches the end of a line</li>
+        <li><code>*</code> - Matches 0 or more occurrences</li>
+        <li><code>+</code> - Matches 1 or more occurrences</li>
+        <li><code>?</code> - Matches 0 or 1 occurrence</li>
+        <li><code>[...]</code> - Matches any single character in brackets</li>
+    </ul>
+    <p>Example: <code>\b\w+@\w+\.\w{2,3}\b</code> matches most email addresses.</p>
+</div>
+    
     <form action="/results" method="post">
         <h2>Regex Matcher</h2>
         <label for="test_string">Test String:</label>
